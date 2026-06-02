@@ -1,0 +1,15 @@
+.task-column-background {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.task-column {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}

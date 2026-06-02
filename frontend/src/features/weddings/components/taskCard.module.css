@@ -1,0 +1,122 @@
+.task-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 340px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Forces everything to align left like screenshot 2 */
+  gap: 10px;
+  position: relative;
+  
+  /* Soft drop shadow instead of harsh grey borders */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+/* Header Row */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+  .date-text {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  .metrics {
+    font-size: 11px;
+    color: #94a3b8;
+    display: flex;
+    gap: 8px;
+  }
+}
+
+.status-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* The small capsule Pill badge styling */
+.status-chip {
+  font-size: 9px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+/* Color codes directly matched to the second image palette */
+.completed {
+  background-color: #00dfa2 !important; /* Mint Teal */
+  color: #ffffff !important;
+}
+
+.pending {
+  background-color: #ffb84c !important; /* Soft Pastel Orange */
+  color: #ffffff !important;
+}
+
+.in-progress {
+  background-color: #f44336 !important; /* Soft Red */
+  color: #ffffff !important;
+}
+
+/* Body Content */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  
+  .category-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+  }
+
+  .task-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+  }
+}
+
+/* Footer Section */
+.card-footer {
+  width: 100%;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 10px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+
+  .assignee-text {
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+}
+
+/* Context Menu Button Placement */
+.menu-dots-btn {
+  position: absolute;
+  right: 16px;
+  top: 45%;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}

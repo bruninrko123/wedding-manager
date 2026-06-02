@@ -1,0 +1,108 @@
+/* 1. The semi-transparent dark backdrop that blankets the whole screen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6); /* Translucent charcoal dark tint */
+  
+  /* Flexbox automatically centers the card perfectly horizontally & vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Pushes it onto a massive layer above the Kanban lanes and boards */
+  z-index: 99999; 
+}
+
+/* 2. The white card popup box containing your form fields */
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 440px; /* Ideal SaaS modal popup width */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* 3. Headers and Label spacing */
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-content label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #475569;
+  font-size: 14px;
+}
+
+/* 4. Form inputs configuration */
+.modal-content input[type="text"],
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #f8fafc;
+  font-family: inherit;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #2563eb; /* Changes to a nice sleek blue on click */
+  background-color: #ffffff;
+}
+
+.modal-content textarea {
+  height: 100px;
+  resize: none; /* Prevents users from manually distorting the box size layout */
+}
+
+/* 5. Submitting Interactive Button */
+.modal-content button[type="submit"] {
+  padding: 12px;
+  background-color: #2563eb; 
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+.modal-content button[type="button"] {
+  padding: 12px;
+  background-color: #e5e7eb; 
+  color: #1e293b;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.15s ease-in-out;
+}
+
